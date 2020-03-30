@@ -3,7 +3,7 @@ public class ReversingString {
      String s = "Sherlin";
      String rev = "";
      char[] chArr = s.toCharArray();
-     System.out.println("The String is: "+s);
+     System.out.println("The String is: " +s);
      for(int i=chArr.length-1; i>=0; i--)
      {
         rev = rev + chArr[i];
