@@ -1,0 +1,33 @@
+// Program to remove Palindrome from a Sentence , omitting single letter words eg: I or A
+
+public class RemovingPalindrome {
+    public static void main(String args[]) {
+        String sentence = "My friend A speaks malayalam";
+        String palindromeRemoved = "";
+        String words[] = sentence.split(" ");
+
+        System.out.println("Sentence with palindrome: " + words.length);
+        for(String word: words)
+        {
+            if(word.length()==1)
+            {
+                palindromeRemoved = palindromeRemoved + word + " ";
+            }
+            else
+            {
+                StringBuffer revWord = new StringBuffer(word);
+                StringBuffer rev = revWord.reverse();
+                
+                StringBuffer sWord = new StringBuffer(word);
+
+                if(sWord.toString().equals(revWord.toString())){
+                    break;
+                }
+                else{
+                    palindromeRemoved = palindromeRemoved + word + " ";
+                }
+            }
+        }
+        System.out.println("Sentence after removing the palindrome: " + palindromeRemoved);
+    }
+}
